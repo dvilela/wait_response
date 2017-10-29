@@ -1,0 +1,6 @@
+#
+### dev-requirements.txt ###
+#
+
+# For testing
+responses == 0.8.1

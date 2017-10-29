@@ -1,13 +1,12 @@
 #!/usr/bin/python
 
 from time import sleep
-
-import requests
+from requests import get as http_get
 
 URL, ATTEMPTS, SLEEP_SECS, STATUS_UP = 'http://localhost:8080/health', 20, 1, 'UP'
 
 def health_match_status(url, status):
-    r = requests.get(url)
+    r = http_get(url)
     if r.status_code is not 200:
         return False
     return r.json()['status'] is not status
