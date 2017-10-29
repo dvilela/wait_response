@@ -16,7 +16,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='waitresponse',
-    version='0.0.2',
+    version='0.1.2',
 
     description='Wait for some http response',
     long_description=long_description,
