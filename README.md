@@ -22,6 +22,7 @@ from waitresponse import waitresponse
 
 # Make 2 attempts to get status=UP, trying every 1 seconds. 
 respCode = waitresponse('http://localhost:8080/health', 2, 1, 'UP')
+print(respCode) # 0 if sucess or else, 1
 
 ```
 
