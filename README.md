@@ -12,7 +12,20 @@ Lets say we have an endpoint `http://localhost:8080/health` that give
 us a json, e.g., `{ "status": "UP" }`. This script keep checking that endpoint
 until it receives the `UP` status or it reaches the max number of attempts.
 
-# API
+# Module
+
+You can use a function from the module to wait for status responses.
+
+```python
+import waitresponse
+from waitresponse import waitresponse
+
+# Make 2 attempts to get status=UP, trying every 1 seconds. 
+respCode = waitresponse('http://localhost:8080/health', 2, 1, 'UP')
+
+```
+
+# Script
 
 `python waitresponse.py url [OPTIONS]`
 
