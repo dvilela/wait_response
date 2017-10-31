@@ -1,7 +1,7 @@
 """A setuptools based setup module.
 See:
 https://packaging.python.org/en/latest/distributing.html
-https://github.com/dvilela/waitresponse
+https://github.com/dvilela/wait_response
 """
 
 from setuptools import setup, find_packages
@@ -15,13 +15,13 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='waitresponse',
-    version='0.1.2',
+    name='wait_response',
+    version='1.0.0',
 
     description='Wait for some http response',
     long_description=long_description,
 
-    url='https://github.com/dvilela/waitresponse',
+    url='https://github.com/dvilela/wait_response',
 
     author='dvilela',
     author_email='denisxvilela@gmail.com',
@@ -48,9 +48,11 @@ setup(
         'Programming Language :: Python :: 3.5'
     ],
 
+    install_requires=['requests'],
+
     entry_points={
         'console_scripts': [
-            'waitresponse=waitresponse:main',
+            'wait_response=wait_response:main',
         ]
     }
 )

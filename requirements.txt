@@ -1,0 +1,4 @@
+requests == 2.18.4
+
+# To Test
+responses == 0.8.1
